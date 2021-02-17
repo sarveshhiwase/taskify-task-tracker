@@ -1,0 +1,313 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  /*background: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a18cd1));*/
+  /*background: linear-gradient(90deg, #a18cfd 0%, #a18cd1 100%);*/
+  background: url("https://wallpaperboat.com/wp-content/uploads/2019/10/free-mountain-vector-01.jpg");
+  /*background: linear-gradient(
+    90deg,
+    rgba(48, 16, 255, 1) 0%,
+    rgba(100, 115, 255, 1) 100%
+  );*/
+  color: white;
+}
+
+.App {
+  text-align: center;
+}
+
+.title {
+  font-size: 72px;
+  color: white;
+  font-weight: bold;
+  background: -webkit-linear-gradient(45deg, #e8efa9, #00ff95 80%);
+  /*background-clip: border-box;*/
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.inner-title {
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+  background: -webkit-linear-gradient(45deg, #e8efa9, #00ff95 80%);
+  /*background-clip: border-box;*/
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.personal {
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 600px;
+  min-height: 600px;
+  /*overflow: scroll;*/
+  background: #161a2b;
+
+  text-align: center;
+  margin: 64px auto;
+  border-radius: 10px;
+  /*padding: 0 12px 32px;*/
+  padding-bottom: 32px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+header {
+  /*background: black;*/
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.container,
+.listcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  /*padding: 8px;*/
+  margin: auto;
+  max-width: 72rem;
+}
+
+.container a {
+  font-weight: bold;
+  color: dimgray;
+}
+
+.listcontainer img {
+  margin-right: 32px;
+}
+
+.listcontainer a:last-child {
+  margin-right: 0;
+  color: white;
+  background-color: #18bfff;
+  border-radius: 30px;
+  text-align: center;
+  padding: 6px 30px;
+}
+.listcontainer a:last-child:hover {
+  background-color: #0b76b7;
+}
+
+.smallmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signoutbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  color: #4568dc;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.signoutbutton:hover {
+  color: #537dff;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  padding: 0 13px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #e2e2e2;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 118, 20, 1) 0%,
+    rgba(255, 84, 17, 1) 100%
+  );
+  /*opacity: 0.8;*/
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.todo-row:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+}
+
+.todo-row:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 12, 241, 1) 0%,
+    rgba(250, 0, 135, 1) 100%
+  );
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.edit-icon {
+  color: #fff;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*padding: 20px;*/
+  padding: 20px;
+  background: transparent;
+  margin: auto;
+  margin-top: 15vh;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 320px;
+}
+
+.homebutton {
+  color: #4568dc;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.homebutton:hover {
+  opacity: 0.85;
+}
+
+.flex input {
+  width: 300px;
+  padding: 10px;
+  margin-top: 10px;
+  background: rgba(84, 28, 196, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.flex input::placeholder {
+  color: white;
+  font-weight: bold;
+}
+.flex button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 220px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.card-heading {
+  width: 50%;
+  height: 50%;
+}
