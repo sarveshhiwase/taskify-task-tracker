@@ -11,7 +11,7 @@ const Settings = ({ setSettingspage, userdetails }) => {
         width="200"
         height="200"
         style={{ borderRadius: "50%" }}
-        src={`${process.origin.REACT_APP_API}/users/${userdetails._id}/avatar`}
+        src={`${process.env.REACT_APP_API}/users/${userdetails._id}/avatar`}
         alt="profilepic"
       />
       <AvatarUpload setError={setError} />
