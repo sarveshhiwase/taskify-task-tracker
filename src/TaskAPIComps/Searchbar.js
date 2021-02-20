@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const SearchBar = ({ userdetails, logout, setSettingspage }) => {
-  const [imagesrc, setImage] = useState(null);
-  useEffect(() => {
-    setImage(`${process.env.REACT_APP_API}/users/${userdetails._id}/avatar`);
-  }, [userdetails]);
+  const imagesrc = `${process.env.REACT_APP_API}/users/${userdetails._id}/avatar`
 
   return (
     <>
