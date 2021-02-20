@@ -31,7 +31,7 @@ const App = () => {
         res
           .json()
           .then((data) => {
-            if (data.user) {
+            if (data.user.name) {
               setUserdetails(data.user);
             } else {
               setLoading(false);
@@ -46,12 +46,9 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (
-      Object.keys(userdetails).length !== 0 &&
-      userdetails.constructor === Object
-    ) {
-      setLoading(false);
+    if (userdetails.name) {
       setLoggedIn(true);
+      setLoading(false);
     }
   }, [userdetails]);
 
@@ -68,6 +65,7 @@ const App = () => {
       localStorage.removeItem("token");
       setLoggedIn(false);
       setLoginprompt(true);
+      setUserdetails({});
     } else {
       setError("There was problem with logging you out");
     }
